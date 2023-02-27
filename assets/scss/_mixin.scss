@@ -25,21 +25,41 @@
   background-repeat: no-repeat;
 }
 
+// @mixin breakpoint($point) {
+//   @if $point == xs {
+//     @media only screen and (max-width: 575px) {
+//       @content;
+//     }
+//   } @else if $point == sm {
+//     @media only screen and (min-width: 375px) {
+//       @content;
+//     }
+//   } @else if $point == md {
+//     @media only screen and (min-width: 768px) {
+//       @content;
+//     }
+//   } @else if $point == lg {
+//     @media only screen and (min-width: 992px) {
+//       @content;
+//     }
+//   } @else if $point == xl {
+//     @media only screen and (min-width: 1200px) {
+//       @content;
+//     }
+//   }
+// }
+
 @mixin breakpoint($point) {
-  @if $point == xs {
-    @media only screen and (max-width: 575px) {
-      @content;
-    }
-  } @else if $point == sm {
-    @media only screen and (min-width: 375px) {
+  @if $point == sm {
+    @media only screen and (max-width: 574px) {
       @content;
     }
   } @else if $point == md {
-    @media only screen and (min-width: 768px) {
+    @media only screen and (max-width: 767px) {
       @content;
     }
   } @else if $point == lg {
-    @media only screen and (min-width: 992px) {
+    @media only screen and (max-width: 991px) {
       @content;
     }
   } @else if $point == xl {
