@@ -1,0 +1,22 @@
+/* ---------------------------- Buttons and forms Reset --------------------------- */
+button,
+.btn:focus,
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+button {
+  border: 1px solid transparent;
+}
+
+.primary_btn {
+  background: $secondary_color;
+  color: $dark_color;
+  border-radius: 35px;
+  padding: 10px 25px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.secondary-btn {
+}
