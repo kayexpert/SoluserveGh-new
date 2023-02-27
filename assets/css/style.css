@@ -91,7 +91,7 @@ img {
   background-color: rgba(0, 0, 0, 0.403);
   border-radius: 0px 0px 30px 30px;
   padding: 0px 10px;
-  height: 80px;
+  height: 70px;
   transition: 0.5s ease-in-out;
 }
 .nav-bar .nav-bar-links .nav-link {
@@ -159,31 +159,44 @@ img {
   background: #0a315e !important;
 }
 .nav-bar .mobile-nav-btn {
+  transition: 5s ease-in-out;
   position: relative;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  width: 25px;
-  height: 20px;
-  transition: all 0.5s ease-in-out;
 }
 .nav-bar .mobile-nav-btn .menu-toggle {
+  content: "";
   background: #fff;
-  width: 25px;
+  width: 30px;
   height: 2px;
-  border-radius: 5px;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
 }
 .nav-bar .mobile-nav-btn .menu-toggle::before, .nav-bar .mobile-nav-btn .menu-toggle::after {
-  content: "";
   position: absolute;
+  content: "";
   background: #fff;
-  width: 25px;
+  width: 30px;
   height: 2px;
-  border-radius: 5px;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
 }
 .nav-bar .mobile-nav-btn .menu-toggle::before {
   transform: translateY(-10px);
 }
 .nav-bar .mobile-nav-btn .menu-toggle::after {
   transform: translateY(10px);
+}
+.nav-bar .mobile-nav-btn.clicked .menu-toggle {
+  transform: translateX(-20px);
+  background: transparent;
+}
+.nav-bar .mobile-nav-btn.clicked .menu-toggle::before {
+  transform: rotate(45deg) translate(15px, -15px);
+}
+.nav-bar .mobile-nav-btn.clicked .menu-toggle::after {
+  transform: rotate(-45deg) translate(15px, 15px);
 }
 
 .footer {
