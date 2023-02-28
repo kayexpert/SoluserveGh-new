@@ -26,11 +26,6 @@ $(".partners-slide").owlCarousel({
   },
 });
 
-lightGallery(document.getElementById("lightgallery"), {
-  plugins: [lgZoom, lgThumbnail],
-  speed: 500,
-  // ... other settings
-});
 // Navigation
 let mobile_nav_icon = document.querySelector(".mobile-nav-btn");
 let mobile_nav_bar = document.querySelector(".navbar");
