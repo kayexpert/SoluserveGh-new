@@ -276,6 +276,17 @@
   }
 }
 
+.qhse {
+  li {
+    margin-bottom: 20px;
+    font-size: 18px;
+    i {
+      color: $secondary_color;
+      font-size: 18px;
+    }
+  }
+}
+
 // Service
 .serv {
   .sec-1,
@@ -329,6 +340,9 @@
 /*--------------------------------------------------------------
   # Careers Page
   --------------------------------------------------------------*/
+.listings {
+  @include bg_img(url("../img/plain-bg-3.png"));
+}
 .why-join .img-bg,
 .how-to-join .img-bg {
   min-height: 554px;
@@ -338,6 +352,33 @@
 @media (max-width: 768px) {
   .img-bg {
     min-height: 250px !important;
+  }
+}
+
+.how-to-join {
+  @include bg_img(url("../img/blue-bg-2.png"));
+  p,
+  h3 {
+    color: #fff;
+  }
+  h6,
+  h5 {
+    color: $secondary_color;
+  }
+  .icon-box i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $secondary_color;
+    margin-right: 25px;
+    font-size: 28px;
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    line-height: 0;
+    box-shadow: 0px 2px 30px rgb(0 0 0 / 8%);
+    background-color: #fff;
+    transition: 0.3s;
   }
 }
 
@@ -353,9 +394,12 @@
   position: relative;
 }
 
-.listings .wrapper h3,
-.why-join ul li h5 {
+.listings .wrapper h3 {
   border-left: 3px solid #364d59;
+  padding-left: 10px;
+}
+.why-join ul li h5 {
+  border-left: 3px solid $secondary_color;
   padding-left: 10px;
 }
 
@@ -366,6 +410,12 @@
 .listings .wrapper a {
   color: #364d59 !important;
   font-size: 14px;
+}
+.why-join h2 {
+  color: $secondary_color;
+  i {
+    font-size: 15px;
+  }
 }
 .why-join ul li h5 {
   font-weight: 800;

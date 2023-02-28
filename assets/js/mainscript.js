@@ -26,6 +26,11 @@ $(".partners-slide").owlCarousel({
   },
 });
 
+lightGallery(document.getElementById("lightgallery"), {
+  plugins: [lgZoom, lgThumbnail],
+  speed: 500,
+  // ... other settings
+});
 // Navigation
 let mobile_nav_icon = document.querySelector(".mobile-nav-btn");
 let mobile_nav_bar = document.querySelector(".navbar");
@@ -33,6 +38,7 @@ mobile_nav_icon.addEventListener("click", () => {
   // mobile_nav_bar.classList.toggle("open");
   mobile_nav_icon.classList.toggle("clicked");
 });
+
 window.addEventListener("scroll", () => {
   let navbar = document.querySelector(".nav-bar");
 

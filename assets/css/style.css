@@ -152,13 +152,17 @@ img {
 .nav-bar.sticky .nav-link:hover, .nav-bar.sticky .nav-link.active {
   color: rgba(228, 186, 34, 0.8352941176) !important;
 }
-.nav-bar.sticky .menu-toggle {
+.nav-bar.sticky .mobile-nav-btn .menu-toggle {
   background: #0a315e !important;
 }
-.nav-bar.sticky .menu-toggle::before, .nav-bar.sticky .menu-toggle::after {
+.nav-bar.sticky .mobile-nav-btn .menu-toggle::before, .nav-bar.sticky .mobile-nav-btn .menu-toggle::after {
   background: #0a315e !important;
+}
+.nav-bar.sticky .mobile-nav-btn.clicked .menu-toggle {
+  background: transparent !important;
 }
 .nav-bar .mobile-nav-btn {
+  overflow: hidden;
   transition: 5s ease-in-out;
   position: relative;
   width: 40px;
@@ -594,6 +598,15 @@ button {
   padding-bottom: 20px;
 }
 
+.qhse li {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.qhse li i {
+  color: #feb900;
+  font-size: 18px;
+}
+
 .serv .sec-1,
 .serv .sec-3,
 .serv .sec-5 {
@@ -644,6 +657,13 @@ button {
 /*--------------------------------------------------------------
   # Careers Page
   --------------------------------------------------------------*/
+.listings {
+  background: url("../img/plain-bg-3.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .why-join .img-bg,
 .how-to-join .img-bg {
   min-height: 554px;
@@ -656,6 +676,36 @@ button {
     min-height: 250px !important;
   }
 }
+.how-to-join {
+  background: url("../img/blue-bg-2.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.how-to-join p,
+.how-to-join h3 {
+  color: #fff;
+}
+.how-to-join h6,
+.how-to-join h5 {
+  color: #feb900;
+}
+.how-to-join .icon-box i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #feb900;
+  margin-right: 25px;
+  font-size: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 4px;
+  line-height: 0;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  transition: 0.3s;
+}
+
 .listings .wrapper {
   background: rgba(10, 49, 94, 0.2901960784);
   padding: 40px 30px;
@@ -669,9 +719,13 @@ button {
   position: relative;
 }
 
-.listings .wrapper h3,
-.why-join ul li h5 {
+.listings .wrapper h3 {
   border-left: 3px solid #364d59;
+  padding-left: 10px;
+}
+
+.why-join ul li h5 {
+  border-left: 3px solid #feb900;
   padding-left: 10px;
 }
 
@@ -682,6 +736,13 @@ button {
 .listings .wrapper a {
   color: #364d59 !important;
   font-size: 14px;
+}
+
+.why-join h2 {
+  color: #feb900;
+}
+.why-join h2 i {
+  font-size: 15px;
 }
 
 .why-join ul li h5 {

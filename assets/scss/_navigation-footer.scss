@@ -79,18 +79,23 @@
       }
     }
 
-    .menu-toggle {
-      background: $primary_color !important;
-      &::before,
-      &::after {
+    .mobile-nav-btn {
+      .menu-toggle {
         background: $primary_color !important;
+        &::before,
+        &::after {
+          background: $primary_color !important;
+        }
+      }
+      &.clicked .menu-toggle {
+        background: transparent !important;
       }
     }
   }
 
   // Mobile nav
   .mobile-nav-btn {
-    // overflow: hidden;
+    overflow: hidden;
     transition: 5s ease-in-out;
     position: relative;
     width: 40px;
